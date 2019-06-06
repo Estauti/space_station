@@ -47,4 +47,4 @@ Restrições:
 * Um robô de uma extremidade só pode sair se o da outra não sair pois ambos trabalham nos mesmos locais na estação espacial.
 * Um robô só pode pegar 1 módulo de bateria por vez.
 
-![sdfsdf](https://snag.gy/2Gurla.jpg)
+![sdfsdf](https://i.snag.gy/2Gurla.jpg)
