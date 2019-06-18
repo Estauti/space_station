@@ -21,7 +21,7 @@ robots = [
 puts robots
 counter = 1
 
-while true do   
+ARGV[0].to_i.times do
 
   puts ""
   puts "EXECUÇÃO NÚMERO ##{counter}"
@@ -47,4 +47,13 @@ while true do
   puts robots
 
   counter += 1
+end
+
+if ARGV.include? "logs"
+  puts ""
+  puts "==== Logs das Baterias ===="
+  puts ""
+  batteries.each do |battery|
+    puts battery
+  end
 end

@@ -1,15 +1,18 @@
 require "monitor"
+require "json"
 
 class Battery
   attr_reader :id
+  attr_accessor :logs
 
   def initialize id
     @id = id
+    @logs = []
     extend(MonitorMixin)    
   end
 
   def to_s
-    "#{@id}"
+    "#{@id}, #{JSON.pretty_generate(@logs)}"
   end
 
   def lock
@@ -24,6 +27,10 @@ class Battery
 
   def owns_this
     mon_owned?
+  end
+
+  def add_to_logs log
+    @logs << log
   end
   
 end

@@ -36,6 +36,11 @@ class Robot
   def get_batteries
     @batteries.each do |battery|
       battery.lock
+      battery.add_to_logs({
+        time: Time.now,
+        robot: @name,
+        msg: "Tried to access"
+      })
     end
   end
 
